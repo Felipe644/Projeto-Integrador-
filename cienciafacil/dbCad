@@ -1,0 +1,27 @@
+<?php 
+    include 'dbase.php';
+
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$senha = $_POST['senha'];
+	$repsenha = $_POST['rptSenha'];
+
+	if ($senha == $repsenha) {
+		$sql = "insert into usuario (nome, email, senha) value ('$nome', '$email', '$senha')";
+
+		$salvar = mysqli_query($conexao, $sql);
+
+		$mensagem = "Usuário cadastrado com sucesso";
+		$site = 'index.html';
+	    include 'Mensagem.php';
+	} else {
+		$mensagem = "Preencher o campo de senha corretamente!";
+		$site = 'index.html';
+	    include 'Mensagem.php';
+	}
+
+	mysqli_close($conexao);
+ ?>
+
+
+

@@ -1,0 +1,105 @@
+<DOCTYPE html>
+	<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<title>Ciência Fácil</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	</head>
+	<body>
+		<header id="cabecalho">
+			<a href="index.html"><h1 class="logo">Ciência Fácil</h1></a>﻿
+			
+			<nav class="menu">
+				<a class="btn-close"><i class="fa fa-times"></i></a>
+			</nav>
+
+			<div class="buttons">
+				<button id="logLink" class="btn-entrar">Fazer Login</button>
+				<button id="cadLink" class="btn-cadastrar">Cadastrar-se</button>				
+			</div>
+		</header>
+
+		<div class="banner">
+				<h1>ÚLTIMAS NOTÍCIAS</h1>
+				<h3><i>Sistema de compartilhamento de conteúdo científico.</i></h3>
+				<h3><i>A aprendizagem é a chave para o Futuro!</i></h3>
+			
+
+			</div>
+		</div>
+		<main class="sevicos">
+			<article class="servico">
+
+		<a href="http://blog.alura.com.br/redesign-de-site-saiba-por-onde-comecar/" target="_blank">
+				<img src="_imagens/tecnologia.jpg" alt="Importância da Tecnologia">
+				<div class="inner">
+					<a href="http://blog.alura.com.br/redesign-de-site-saiba-por-onde-comecar/"target="_blank">Redesign de site: saiba por onde começar e o que levar em conta</a>
+					<p>Provavelmente você já pensou sobre como um site seria se determinado menu fosse diferente ou o fundo tivesse uma outra cor, certo? Antes de iniciar o redesign de um site, é preciso ter em mente que esse tipo de projeto é.</p>
+		</a>
+			</article>
+
+		</main>
+		
+		<main class="sevicos">
+			<article class="servico">
+				<a href="http://blog.alura.com.br/comecando-com-o-terminal-manipulando-arquivos-e-diretorios/" target="_blank">
+				<img src="_imagens/comunicacao.jpg" alt="Segurança da Informação">
+				<div class="inner">
+					<a href="http://blog.alura.com.br/comecando-com-o-terminal-manipulando-arquivos-e-diretorios/" target="_blank"">Começando com o terminal: manipulando arquivos</a>
+					<p> Quando estamos programando, é bem comum nos depararmos com situações na qual temos que utilizar o terminal. Seja para dar um commit nas alterações, fazer uma consulta no banco de dados, ou simplesmente procurar por um arquivo, o terminal está presente.</p>
+				</a>
+			</article>
+		</main>
+		<main class="sevicos">
+			<article class="servico">
+				<a href="https://www.lambda3.com.br/2017/02/podcast-31-comunicacao-nao-violenta/" target=_blank"><img src="_imagens/tec.jpg" alt="comunicação da Informação"></a>
+				<div class="inner">
+					<a href="https://www.lambda3.com.br/2017/02/podcast-31-comunicacao-nao-violenta/" target=_blank">Lambda3 Podcast 31 – Comunicação não violenta</a>
+					<p>Comunicação na Informação pode ser definida como um conjunto de recursos tecnológicos, utilizados de forma integrada, com um objetivo comum. As TICs são utilizadas das mais diversas formas, na indústria, no comércio, no setor de investimentos e na educação.  </p>
+			</article>
+		</main>
+		
+
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+	<script> 
+	$(".btn-menu").click(function() { 
+		$(".menu").show(); 
+	}); 
+	$(".btn-close").click(function() { 
+		$(".menu").hide(); }); 
+	</script>
+<footer class="rodape">
+	<p>© Ciência Fácil - Todos os Direitos Reservados</p>
+</footer>
+
+
+		<section id="login" class="login none">
+			<form action="dbLog.php" method="post">
+				<br>
+				<input type="text" class="campo" maxlength="20" name="login"  placeholder="Login" required autofocus><br>
+				<input type="password" class="campo" maxlength="15" name="senha" placeholder="Digite sua senha" required><br><br>
+
+				<input type="submit" class="btn" value="Entrar">
+				<input id="logLink2" type="reset" class="btnR" value="Cancelar">
+			</form>
+		</section>
+
+		<section id="cadastro" class="cadastro none">
+			<form action="dbCad.php" method="post">
+				<br>
+				<input type="text" class="campo" maxlength="20" name="nome" placeholder="Digite seu Nome" required autofocus><br>
+				<input type="email" class="campo" maxlength="50" name="email" placeholder="Digite seu E-Mail" required><br>
+				<input type="password" class="campo" maxlength="15" name="senha" placeholder="Digite sua Senha" required><br>
+				<input type="password" class="campo" maxlength="15" name="rptSenha" placeholder="Repita a Senha" required><br><br>
+
+				<input type="submit" class="btn" value="Cadastrar-se">
+				<input id="cadLink2" type="reset" class="btnR" value="Cancelar">
+			</form>
+		</section>
+		<script src="js/script.js"></script>
+	</body>
+	</html>

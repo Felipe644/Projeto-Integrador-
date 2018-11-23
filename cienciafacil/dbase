@@ -1,0 +1,29 @@
+<?php
+	header("Content-type:text/html; charset=utf-8");
+
+	// $hostname = "localhost";
+	// $user = "yljefers_admin";
+	// $password = "@Lire8521";
+	// $database = "yljefers_cienciafacil";
+
+	$hostname = "br56.hostgator.com.br";
+	$user = "yljefers_admin";
+	$password = "@Lire8521";
+	$database = "yljefers_cienciafacil";
+
+	$conexao = mysqli_connect($hostname,$user,$password,$database);
+
+	if (!$conexao){
+		die("Falha na conexão: " . mysqli_connect_error());
+	} else {
+		
+	}
+
+	if (!mysqli_set_charset($conexao, 'utf8')) {
+		$mensagem = "Falhou meu chapa";
+		$site = 'index.html';
+	    include 'Mensagem.php';
+	    printf('Error ao usar utf8: %s', mysqli_error($conexao));
+	    exit;
+	}
+?>
